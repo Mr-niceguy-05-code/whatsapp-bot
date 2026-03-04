@@ -4,9 +4,9 @@ const axios = require("axios");
 const app = express();
 app.use(express.json());
 
-const VERIFY_TOKEN = "allan123"; // change later
-const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"; // change later
-const PHONE_NUMBER_ID = "YOUR_PHONE_NUMBER_ID";
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+const PHONE_NUMBER_ID = process.env.PHONE_NUMBER_ID;
 
 app.get("/", (req, res) => {
   res.send("WhatsApp Bot is running 🚀");
